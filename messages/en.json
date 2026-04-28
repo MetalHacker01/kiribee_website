@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "Kiribee · Hand-poured beeswax candles from Albania",
+    "description": "Kiribee crafts 100% Albanian beeswax candles in Tirana. Eco-friendly, hypoallergenic, hand-poured by Ana and Aldo with a dash of love.",
+    "ogAlt": "Kiribee, beeswax candles handmade in Albania"
+  },
+  "nav": {
+    "story": "Story",
+    "about": "Maker",
+    "process": "Process",
+    "candles": "Candles",
+    "wraps": "Wraps",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLocale": "Switch language"
+  },
+  "hero": {
+    "eyebrow": "Handmade in Tirana, Albania",
+    "title": "Crafted by",
+    "titleAccent": "Albanian bees.",
+    "lede": "Hand-poured candles made of pure Albanian beeswax. Quiet, golden, and a little bit alive.",
+    "ctaPrimary": "Discover the story",
+    "ctaSecondary": "Get in touch",
+    "scrollHint": "scroll"
+  },
+  "story": {
+    "eyebrow": "The story",
+    "title": "Two hands, a quiet workshop, and a dash of love.",
+    "p1": "Ana and Aldo are a couple from Tirana, with backgrounds in finance and the exact sciences, and a passion for the slowest of crafts. During the pandemic, they taught themselves the patient art of working with beeswax, hour by hour, until the wax began to cooperate.",
+    "p2": "They noticed a gap in the Albanian market for genuine beeswax candles and decided to be the first to fill it. Today every Kiribee candle is poured by hand from 100% pure Albanian beeswax. No chemicals, no shortcuts, no compromises.",
+    "p3": "Their mission is small but stubborn. To give people a reason to slow down. To light a candle and let the room soften.",
+    "signatureLine": "with love, Ana & Aldo",
+    "creditLabel": "As featured in",
+    "creditSource": "The Albania Insider"
+  },
+  "about": {
+    "eyebrow": "The maker",
+    "title": "Meet Ana.",
+    "lede": "She studied finance. She fell for the slowest of crafts. The steady hand behind every Kiribee candle. Aldo is her partner in everything, the second pair of hands that keeps the workshop running.",
+    "factsTitle": "A few small facts"
+  },
+  "benefits": {
+    "eyebrow": "Why beeswax",
+    "title": "The candle, only purer."
+  },
+  "process": {
+    "eyebrow": "The process",
+    "title": "From the hive, slowly, by hand.",
+    "subtitle": "Five quiet steps. No shortcuts."
+  },
+  "featured": {
+    "eyebrow": "The collection",
+    "title": "A few candles we love.",
+    "subtitle": "A small selection of our hand-poured pieces. Inquire for sizes, dedications, and bespoke orders.",
+    "signatureBadge": "Bestseller",
+    "inquire": "Inquire"
+  },
+  "wraps": {
+    "eyebrow": "Beyond the candle",
+    "title": "Beeswax food wraps.",
+    "lede": "A reusable, washable, beautifully imperfect alternative to plastic wrap. Cotton soaked in beeswax, tree resin, and jojoba oil. Cut a sheet, warm it with your hands, fold it around your cheese.",
+    "cta": "Inquire about wraps"
+  },
+  "gallery": {
+    "eyebrow": "Gallery",
+    "title": "The workshop, the wax, the warm light.",
+    "viewOnInstagram": "See more on Instagram"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Tell us what you have in mind.",
+    "subtitle": "Custom dedications, bulk orders, gifts, wraps. Write to us and Ana or Aldo will reply personally.",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "message": "Message",
+    "messagePlaceholder": "What can we make for you?",
+    "submit": "Send message",
+    "submitting": "Sending…",
+    "successTitle": "Thank you",
+    "successBody": "Your message is on its way. We'll reply within a day or two.",
+    "errorTitle": "Something went wrong",
+    "errorBody": "Please try again, or write to us directly.",
+    "channelsTitle": "Or reach us directly",
+    "subjectPrefilled": "Inquiry about {candle}"
+  },
+  "footer": {
+    "tagline": "Hand-poured beeswax candles from Tirana, Albania.",
+    "rights": "All rights reserved.",
+    "credit": "developed by DeFrag01"
+  },
+  "errors": {
+    "nameRequired": "Please tell us your name.",
+    "emailInvalid": "Please enter a valid email address.",
+    "messageShort": "Please write a few words about what you'd like."
+  }
+}

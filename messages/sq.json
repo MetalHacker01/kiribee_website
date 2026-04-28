@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "Kiribee · Qirinj me dyll bleta të bërë me dorë në Shqipëri",
+    "description": "Kiribee krijon qirinj 100% me dyll bleta shqiptar në Tiranë. Miqësorë me natyrën, hipoalergjenikë, të derdhur me dorë nga Ana dhe Aldo me një dorë dashuri.",
+    "ogAlt": "Kiribee, qirinj me dyll bleta të bërë me dorë në Shqipëri"
+  },
+  "nav": {
+    "story": "Historia",
+    "about": "Krijuesja",
+    "process": "Procesi",
+    "candles": "Qirinjtë",
+    "wraps": "Mbështjellësit",
+    "gallery": "Galeria",
+    "contact": "Kontakt",
+    "openMenu": "Hap menynë",
+    "closeMenu": "Mbyll menynë",
+    "switchLocale": "Ndrysho gjuhën"
+  },
+  "hero": {
+    "eyebrow": "Bërë me dorë në Tiranë",
+    "title": "Crafted by",
+    "titleAccent": "Albanian bees.",
+    "lede": "Qirinj 100% me dyll bleta shqiptar, të derdhur me dorë. Të qetë, të artë, dhe pak të gjallë.",
+    "ctaPrimary": "Lexo historinë",
+    "ctaSecondary": "Na kontakto",
+    "scrollHint": "scroll"
+  },
+  "story": {
+    "eyebrow": "Historia",
+    "title": "Dy duar, një punishte e qetë, dhe një dorë dashuri.",
+    "p1": "Ana dhe Aldo janë një çift nga Tirana, me sfond në financë dhe shkencat ekzakte, dhe një pasion për zanatin më të ngadaltë. Gjatë pandemisë mësuan vetë artin e durueshëm të punës me dyll bleta, orë pas ore, derisa dylli filloi të bashkëpunonte.",
+    "p2": "Ata vunë re një hapësirë në tregun shqiptar për qirinj të vërtetë me dyll bleta dhe vendosën të jenë të parët që e plotësonin atë. Sot çdo qiri Kiribee derdhet me dorë, nga 100% dyll bleta i pastër shqiptar. Pa kimikate, pa shkurtesa, pa kompromise.",
+    "p3": "Misioni i tyre është i thjeshtë por kokëfortë. T'u japin njerëzve një arsye për të ngadalësuar. Të ndezësh një qiri dhe ta lësh dhomën të zbutet.",
+    "signatureLine": "me dashuri, Ana & Aldo",
+    "creditLabel": "Pjesë e veçantë në",
+    "creditSource": "The Albania Insider"
+  },
+  "about": {
+    "eyebrow": "Krijuesja",
+    "title": "Njihu me Anën.",
+    "lede": "Studioi financë. Ra në dashuri me zanatin më të ngadaltë. Duart e qeta pas çdo qiriu Kiribee. Aldo është partneri i saj në gjithçka, dhe duart e tjera që e mbajnë punishten në lëvizje.",
+    "factsTitle": "Pak fakte rreth meje"
+  },
+  "benefits": {
+    "eyebrow": "Pse dyll bleta",
+    "title": "I njëjti qiri, vetëm më i pastër."
+  },
+  "process": {
+    "eyebrow": "Procesi",
+    "title": "Nga koshere, ngadalë, me dorë.",
+    "subtitle": "Pesë hapa të qetë. Asnjë shkurtesë."
+  },
+  "featured": {
+    "eyebrow": "Koleksioni",
+    "title": "Disa qirinj që i duam.",
+    "subtitle": "Një përzgjedhje e vogël e pjesëve tona të derdhura me dorë. Pyetni për madhësitë, kushtimet dhe porositë e personalizuara.",
+    "signatureBadge": "Më i shituri",
+    "inquire": "Pyet"
+  },
+  "wraps": {
+    "eyebrow": "Përtej qiriut",
+    "title": "Mbështjellës ushqimi me dyll bleta.",
+    "lede": "Një alternativë e ripërdorshme dhe e lavabël ndaj plastikës. Pambuk i lyer me dyll bleta, rrëshirë peme dhe vaj jojoba. Pre një copë, ngrohe me duart, mbështille rreth djathit.",
+    "cta": "Pyet për mbështjellësit"
+  },
+  "gallery": {
+    "eyebrow": "Galeria",
+    "title": "Punishtja, dylli, drita e ngrohtë.",
+    "viewOnInstagram": "Shihni më shumë në Instagram"
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Na thuaj çfarë ke në mendje.",
+    "subtitle": "Kushtime të personalizuara, porosi me shumicë, dhurata, mbështjellës. Na shkruaj dhe Ana ose Aldo do të të përgjigjen personalisht.",
+    "name": "Emri",
+    "namePlaceholder": "Emri yt",
+    "email": "Email",
+    "emailPlaceholder": "ti@shembull.com",
+    "message": "Mesazhi",
+    "messagePlaceholder": "Çfarë mund të bëjmë për ty?",
+    "submit": "Dërgo mesazhin",
+    "submitting": "Po dërgohet…",
+    "successTitle": "Faleminderit",
+    "successBody": "Mesazhi yt është nisur. Do të përgjigjemi brenda një ose dy ditësh.",
+    "errorTitle": "Diçka shkoi keq",
+    "errorBody": "Provo përsëri, ose na shkruaj direkt.",
+    "channelsTitle": "Ose na kontakto direkt",
+    "subjectPrefilled": "Pyetje për {candle}"
+  },
+  "footer": {
+    "tagline": "Qirinj me dyll bleta, të derdhur me dorë në Tiranë.",
+    "rights": "Të gjitha të drejtat e rezervuara.",
+    "credit": "developed by DeFrag01"
+  },
+  "errors": {
+    "nameRequired": "Të lutem na thuaj emrin tënd.",
+    "emailInvalid": "Të lutem shkruaj një email të vlefshëm.",
+    "messageShort": "Të lutem shkruaj disa fjalë për atë që dëshiron."
+  }
+}

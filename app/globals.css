@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --bg: #faf6ec;
+  --ink: #1f1a14;
+  --wax: #3a2a12;
+  --honey: #e8b53a;
+  --amber: #c8821c;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(232, 181, 58, 0.4);
+  color: var(--wax);
+}
+
+/* Soft, warm focus ring across the site */
+*:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@layer components {
+  .container-wide {
+    @apply mx-auto w-full max-w-[88rem] px-6 sm:px-8 lg:px-12;
+  }
+  .container-narrow {
+    @apply mx-auto w-full max-w-3xl px-6 sm:px-8;
+  }
+  .h-display {
+    @apply font-display tracking-tightest text-wax-900;
+    font-feature-settings: "ss01", "ss02";
+  }
+  .eyebrow {
+    @apply text-xs uppercase tracking-[0.32em] font-medium text-amber-700;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-amber-700 px-7 py-3.5 text-sm font-medium text-cream-50 transition-all duration-300 hover:bg-amber-800 hover:-translate-y-0.5 hover:shadow-soft-amber active:translate-y-0;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-wax-900/15 bg-transparent px-7 py-3.5 text-sm font-medium text-wax-900 transition-all duration-300 hover:border-wax-900/40 hover:bg-wax-900/5 hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-1.5 text-sm font-medium text-amber-700 transition-colors hover:text-amber-800;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(180deg, black 70%, transparent 100%);
+    mask-image: linear-gradient(180deg, black 70%, transparent 100%);
+  }
+  .bg-honeycomb-soft {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='100' viewBox='0 0 56 100'><g fill='none' stroke='%23C8821C' stroke-opacity='0.10' stroke-width='1'><path d='M28 0L56 16.18V49.82L28 66 0 49.82V16.18L28 0z'/><path d='M28 33.18L56 49.36V83L28 99.18 0 83V49.36L28 33.18z'/></g></svg>");
+    background-size: 56px 100px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
