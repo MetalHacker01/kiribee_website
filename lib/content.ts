@@ -4,7 +4,7 @@ export const SITE = {
   name: "Kiribee",
   tagline: "Crafted by Albanian bees",
   domain: "kiribee.com",
-  url: "https://kiribee.com",
+  url: "https://www.kiribee.com",
   email: "kiribeecom@gmail.com",
   founded: "2020",
   city: "Tirana",

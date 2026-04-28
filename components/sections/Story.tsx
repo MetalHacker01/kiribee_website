@@ -17,7 +17,7 @@ export function Story() {
           <h2 className="h-display mt-6 text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-balance">
             {t("title")}
           </h2>
-          <p className="mt-8 font-accent text-2xl text-amber-700">
+          <p className="mt-8 font-display italic text-2xl text-amber-800">
             {t("signatureLine")}
           </p>
         </Reveal>

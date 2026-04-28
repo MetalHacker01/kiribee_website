@@ -1,6 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Fraunces, Caveat } from "next/font/google";
+import { Inter, Fraunces } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const sans = Inter({
   subsets: ["latin", "latin-ext"],
@@ -15,14 +17,8 @@ const display = Fraunces({
   axes: ["opsz", "SOFT", "WONK"],
 });
 
-const accent = Caveat({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-accent",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
-  metadataBase: new URL("https://kiribee.com"),
+  metadataBase: new URL("https://www.kiribee.com"),
   title: { default: "Kiribee", template: "%s · Kiribee" },
 };
 
@@ -34,9 +30,13 @@ export default function RootLayout({
   return (
     <html
       suppressHydrationWarning
-      className={`${sans.variable} ${display.variable} ${accent.variable}`}
+      className={`${sans.variable} ${display.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+        <SpeedInsights />
+      </body>
     </html>
   );
 }

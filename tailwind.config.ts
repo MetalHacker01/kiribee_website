@@ -39,7 +39,6 @@ export default {
       fontFamily: {
         display: ["var(--font-display)", "Georgia", "serif"],
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-        accent: ["var(--font-accent)", "cursive"],
       },
       letterSpacing: {
         tightest: "-0.04em",
