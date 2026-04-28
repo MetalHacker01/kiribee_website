@@ -1,14 +1,14 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://kiribee.com",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://www.kiribee.com",
   generateRobotsTxt: true,
   changefreq: "monthly",
   priority: 0.8,
   exclude: ["/api/*"],
   alternateRefs: [
-    { href: "https://kiribee.com/en", hreflang: "en" },
-    { href: "https://kiribee.com/sq", hreflang: "sq" },
-    { href: "https://kiribee.com/en", hreflang: "x-default" },
+    { href: "https://www.kiribee.com/en", hreflang: "en" },
+    { href: "https://www.kiribee.com/sq", hreflang: "sq" },
+    { href: "https://www.kiribee.com/en", hreflang: "x-default" },
   ],
   robotsTxtOptions: {
     policies: [
