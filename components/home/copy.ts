@@ -170,7 +170,7 @@ const en = {
     facts: [
       { icon: "graduation", label: "Studies", text: "I graduated in Banking and Financial Management." },
       { icon: "palette", label: "Art", text: "Art is my hobby, the only thing that pulls me out of everyday routine." },
-      { icon: "sparkles", label: "Taurus", text: "Calm by nature, like a true Taurus, but I love changing my surroundings often." },
+      { icon: "taurus", label: "Taurus", text: "Calm by nature, like a true Taurus, but I love changing my surroundings often." },
       { icon: "plane", label: "Travel", text: "Completely hooked on travelling." },
       { icon: "mountain", label: "Colours", text: "My favourite colours are the earth tones." },
       { icon: "film", label: "Films", text: "My favourite genres are thriller and mystery." },
@@ -281,25 +281,25 @@ const sq: Copy = {
     eyebrow: "Qirinj me dyll blete, punuar me dorë në Tiranë",
     title: "Crafted by",
     titleAccent: "Albanian bees.",
-    lede: "Qirinj të derdhur me dorë, nga dylli i pastër i bletëve shqiptare. Të qetë, të artë dhe pak të gjallë.",
+    lede: "Qirinj të punuar me dorë, nga dylli i pastër i bletëve shqiptare. Të artë, natyralë dhe pak të gjallë.",
     ctaPrimary: "Shiko koleksionin",
     ctaSecondary: "Porosit një qiri",
     plaqueTitle: "Jepi dritë jetës tënde",
     plaqueHint: "Afrohuni pranë flakës dhe shihni si lëkundet",
-    ring: "100% dyll blete shqiptar · derdhur me dorë në Tiranë · ",
+    ring: "100% dyll blete shqiptar · punuar me dorë në Tiranë · ",
   },
   band: [
     { icon: "flower", label: "100% dyll blete shqiptar" },
-    { icon: "hand", label: "Derdhur me dorë në Tiranë" },
+    { icon: "hand", label: "Punuar me dorë në Tiranë" },
     { icon: "feather", label: "Hipoalergjenik" },
-    { icon: "heart", label: "Kushtime personale" },
+    { icon: "heart", label: "Personalizime" },
     { icon: "truck", label: "Dërgesa në gjithë Shqipërinë" },
   ],
   collection: {
     eyebrow: "Koleksioni",
     title: "Disa nga qirinjtë tanë më të dashur.",
     subtitle:
-      "Një përzgjedhje e vogël e punimeve tona. Na shkruani për përmasat, kushtimet dhe porositë sipas dëshirës.",
+      "Një përzgjedhje e vogël e qirinjve tanë me dyll blete, të punuar me dorë në Tiranë. Na shkruani për përmasat, personalizimet dhe porositë sipas dëshirës.",
     badge: "Më i shituri",
     inquire: "Na pyet",
     material: "Dyll blete, fitil pambuku",
@@ -312,7 +312,7 @@ const sq: Copy = {
         image: CANDLE_IMAGES.beequite,
         alt: "BeeQuite, qiri me dyll blete në formën e një dore që mban një fëmijë",
         blurb:
-          "Pjesa jonë më e dashur. Një dorë që mban një fëmijë, një homazh i qetë për lidhjen e pathyeshme mes nënës dhe fëmijës.",
+          "Pjesa jonë më e dashur. Një dorë që mban një fëmijë, një homazh i ëmbël për lidhjen e pathyeshme mes nënës dhe fëmijës.",
         signature: true,
       },
       {
@@ -321,7 +321,7 @@ const sq: Copy = {
         image: CANDLE_IMAGES.minerva,
         alt: "Minerva, qiri me bustin e perëndeshës romake, mes dy qirinjve në formë kolone",
         blurb:
-          "Perëndesha romake e mençurisë, e derdhur në dyll blete të pastër, për të sjellë ngrohtësi, qetësi dhe mendje të kthjellët në shtëpinë tuaj.",
+          "Perëndesha romake e mençurisë, e punuar në dyll blete të pastër, për të sjellë ngrohtësi, qetësi dhe mendje të kthjellët në shtëpinë tuaj.",
       },
       {
         slug: "embrace",
@@ -345,7 +345,7 @@ const sq: Copy = {
         image: CANDLE_IMAGES.bloom,
         alt: "Bloom, qirinj në formë trëndafili pranë qirinjve të ndezur në mbajtëse lotusi",
         blurb:
-          "Qirinj në formë trëndafili, me aromë të butë e të ëmbël mjalti. Të qetë dhe delikatë, për t'u ndezur për dikë që doni.",
+          "Qirinj në formë trëndafili, me aromë të butë e të ëmbël mjalti. Të butë dhe delikatë, për t'u ndezur për dikë që doni.",
       },
     ],
   },
@@ -359,21 +359,21 @@ const sq: Copy = {
     items: [
       { icon: "flame", title: "Digjet më gjatë", body: "Dylli i bletës digjet më ngadalë dhe më pastër se parafina. I njëjti qiri, më shumë mbrëmje." },
       { icon: "leaf", title: "Miqësor me natyrën", body: "Një nënprodukt natyral i bletarisë. Pa naftë dhe pa ngjyrues sintetikë." },
-      { icon: "feather", title: "Hipoalergjenik", body: "Pa përbërës kimikë. I sigurt pranë fëmijëve që flenë, kafshëve shtëpiake dhe mbrëmjeve të qeta." },
-      { icon: "hand", title: "Punuar me dorë", body: "Çdo qiri derdhet, nxirret nga kallëpi dhe përfundohet me dorë nga Ana dhe Aldo në Tiranë." },
-      { icon: "shield", title: "I pastër dhe i ndershëm", body: "100% dyll blete shqiptar. Pa mbushës, pa vajra aromatikë, pa shkurtesa. Vetëm dyll dhe fitil." },
+      { icon: "feather", title: "Hipoalergjenik", body: "Pa përbërës kimikë. I sigurt pranë fëmijëve që flenë, kafshëve shtëpiake dhe mbrëmjeve në shtëpi." },
+      { icon: "hand", title: "Punuar me dorë", body: "Çdo qiri punohet dhe përfundohet me dorë nga Ana dhe Aldo në Tiranë." },
+      { icon: "shield", title: "I pastër, pa shtesa", body: "100% dyll blete shqiptar. Pa mbushës, pa vajra aromatikë, pa shkurtesa. Vetëm dyll dhe fitil." },
     ],
   },
   process: {
     eyebrow: "Procesi",
-    title: "Nga kosheri, ngadalë dhe me dorë.",
-    subtitle: "Pesë hapa të qetë. Pa shkurtesa.",
+    title: "Nga kosherja, ngadalë dhe me dorë.",
+    subtitle: "Pesë hapa, të gjithë me dorë dhe me durim.",
     steps: [
       { title: "Filtrojmë dyllin", body: "Nisim me dyll blete shqiptar të papërpunuar dhe me durim i heqim çdo papastërti, derisa të bëhet i kthjellët dhe i artë.", spec: "Dyll shqiptar i papërpunuar" },
       { title: "E shkrijmë ngadalë", body: "Dylli shkrihet butë, në temperaturën e duhur, pa u nxituar. Pikërisht nxehtësia e bën dallimin mes një qiriu të zakonshëm dhe një punimi artizanal.", spec: "Shkrihet në 62 deri 64 °C" },
-      { title: "E derdhim në kallëp", body: "Vendosim në kallëp një fitil prej pambuku të pastër dhe e derdhim dyllin me një lëvizje të qetë.", spec: "Fitil pambuku i pastër" },
-      { title: "E lëmë të pushojë", body: "Orë të tëra qetësie. Dylli ftohet, ngurtësohet dhe merr formën e kallëpit.", spec: "Orë të tëra qetësie" },
-      { title: "Pak dashuri", body: "E nxjerrim me kujdes çdo punim nga kallëpi dhe e përfundojmë me dorë: një pikturë, një kushtim, ajo prekje e vogël që e bën tëndin.", spec: "I pikturuar, i kushtuar, i yti" },
+      { title: "E derdhim në kallëp", body: "Vendosim në kallëp një fitil prej pambuku të pastër dhe e derdhim dyllin me një lëvizje të vetme.", spec: "Fitil pambuku i pastër" },
+      { title: "E lëmë të pushojë", body: "Orë të tëra pritjeje. Dylli ftohet, ngurtësohet dhe merr formën e kallëpit.", spec: "Orë të tëra pritjeje" },
+      { title: "Pak dashuri", body: "E nxjerrim me kujdes çdo punim nga kallëpi dhe e përfundojmë me dorë: një pikturë, një mbishkrim, ajo prekje e vogël që e bën tëndin.", spec: "I pikturuar, i personalizuar, i yti" },
     ],
   },
   burn: {
@@ -384,9 +384,9 @@ const sq: Copy = {
   },
   story: {
     eyebrow: "Historia jonë",
-    title: "Një punishte e qetë, dy palë duar dhe shumë durim.",
+    title: "Një punishte e thjeshtë, dy palë duar dhe shumë durim.",
     p1: "Unë jam Ana. Kam studiuar për financë, por arti ka qenë gjithmonë ajo që më largon nga rutina e përditshme. Gjatë pandemisë, bashkë me Aldon, mësuam vetë si të punojmë me dyllin e bletës, orë pas ore, derisa më në fund dylli filloi të na bindej.",
-    p2: "Vumë re se në Shqipëri nuk kishte pothuajse fare qirinj të vërtetë me dyll blete, ndaj vendosëm t'i bëjmë vetë. Sot çdo qiri Kiribee derdhet me dorë në Tiranë, nga dylli 100% i bletëve shqiptare. Pa kimikate, pa shkurtesa, pa kompromise.",
+    p2: "Vumë re se në Shqipëri nuk kishte pothuajse fare qirinj të vërtetë me dyll blete, ndaj vendosëm t'i bëjmë vetë. Sot çdo qiri Kiribee punohet me dorë në Tiranë, nga dylli 100% i bletëve shqiptare. Pa kimikate, pa shkurtesa, pa kompromise.",
     p3: "Aldo është partneri im në gjithçka, dora e dytë që e mban punishten në këmbë. Dëshira jonë është e thjeshtë: të ndaleni për një çast, të ndizni një qiri dhe ta lini dhomën të zbutet rreth jush.",
     signature: "me dashuri, Ana",
     quote: "Mund të duket si diçka e vogël, por përfitimet për shëndetin dhe mendjen janë mbresëlënëse.",
@@ -397,7 +397,7 @@ const sq: Copy = {
     facts: [
       { icon: "graduation", label: "Studimet", text: "Jam diplomuar për Menaxhim Bankar dhe Financiar." },
       { icon: "palette", label: "Arti", text: "Arti është hobi im, i vetmi që më largon nga monotonia e përditshme." },
-      { icon: "sparkles", label: "Demi", text: "Jam e qetë nga natyra, si çdo Dem, por më pëlqen ta ndryshoj shpesh ambientin." },
+      { icon: "taurus", label: "Demi", text: "Jam e qetë nga natyra, si çdo Dem, por më pëlqen ta ndryshoj shpesh ambientin." },
       { icon: "plane", label: "Udhëtimet", text: "Jam e fiksuar pas udhëtimeve." },
       { icon: "mountain", label: "Ngjyrat", text: "Ngjyrat e mia të preferuara janë ato të tokës." },
       { icon: "film", label: "Filmat", text: "Zhanret e mia të preferuara janë thriller dhe mister." },
@@ -436,7 +436,7 @@ const sq: Copy = {
   contact: {
     eyebrow: "Kontakt",
     title: "Na tregoni çfarë keni në mendje.",
-    subtitle: "Kushtime të personalizuara, porosi në sasi, dhurata apo mbështjellëse. Na shkruani dhe Ana ose Aldo do t'ju përgjigjen personalisht.",
+    subtitle: "Personalizime, porosi në sasi, dhurata apo mbështjellëse. Na shkruani dhe Ana ose Aldo do t'ju përgjigjen personalisht.",
     channelsTitle: "Ose na kontaktoni drejtpërdrejt",
     location: "Jemi në Tiranë dhe dërgojmë në të gjithë Shqipërinë",
     email: "Email",
@@ -472,7 +472,7 @@ const sq: Copy = {
   },
   footer: {
     brandline: "Crafted by Albanian bees",
-    tagline: "Qirinj me dyll blete, të derdhur me dorë në Tiranë.",
+    tagline: "Qirinj me dyll blete, të punuar me dorë në Tiranë.",
     explore: "Eksploro",
     hello: "Na shkruani",
     rights: "Të gjitha të drejtat e rezervuara.",

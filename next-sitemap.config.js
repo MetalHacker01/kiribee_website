@@ -31,7 +31,7 @@ module.exports = {
         alternateRefs: [
           { href: "https://www.kiribee.com/en", hreflang: "en", hrefIsAbsolute: true },
           { href: "https://www.kiribee.com/sq", hreflang: "sq", hrefIsAbsolute: true },
-          { href: "https://www.kiribee.com/en", hreflang: "x-default", hrefIsAbsolute: true },
+          { href: "https://www.kiribee.com/sq", hreflang: "x-default", hrefIsAbsolute: true },
         ],
       };
     }

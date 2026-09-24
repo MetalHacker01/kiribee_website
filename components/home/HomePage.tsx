@@ -13,7 +13,7 @@ import {
   Palette,
   Plane,
   ShieldCheck,
-  Sparkles,
+  ZodiacTaurus,
   Truck,
   type LucideIcon,
 } from "lucide-react";
@@ -41,7 +41,7 @@ const ICONS: Record<string, LucideIcon> = {
   shield: ShieldCheck,
   graduation: GraduationCap,
   palette: Palette,
-  sparkles: Sparkles,
+  taurus: ZodiacTaurus,
   plane: Plane,
   mountain: Mountain,
   film: Clapperboard,

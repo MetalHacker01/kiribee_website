@@ -3,7 +3,8 @@ import { getRequestConfig } from "next-intl/server";
 
 export const locales = ["en", "sq"] as const;
 export type Locale = (typeof locales)[number];
-export const defaultLocale: Locale = "en";
+// Albanian first: the business and most of its customers are in Albania.
+export const defaultLocale: Locale = "sq";
 
 export default getRequestConfig(async ({ requestLocale }) => {
   let locale = await requestLocale;

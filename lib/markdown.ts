@@ -1,184 +1,140 @@
-import {
-  SITE,
-  FEATURED_CANDLES,
-  PROCESS_STEPS,
-  BENEFITS,
-  PULL_QUOTE,
-  ATTRIBUTION,
-  ABOUT_ANA,
-  WRAPS,
-} from "./content";
+import { SITE } from "./content";
+import { getCopy } from "@/components/home/copy";
 import type { Locale } from "@/i18n";
 
-const STRINGS = {
-  en: {
-    title: "Kiribee · Hand-poured beeswax candles from Albania",
-    sub: "Made by Ana & Aldo in Tirana with 100% Albanian beeswax",
-    storyHeading: "Our story",
-    storyP1:
-      "Ana and Aldo are a couple from Tirana, Albania. During the COVID pandemic, they taught themselves the craft of working with beeswax and noticed a gap in the Albanian market for genuine beeswax candles. They decided to be the first to fill it.",
-    storyP2:
-      "Today every Kiribee candle is poured by hand, from 100% pure Albanian beeswax. No chemicals, no shortcuts, no compromises. Their mission is small but stubborn: to give people a reason to slow down.",
-    aboutHeading: "Meet Ana",
-    aboutBody:
-      "Ana co-founded Kiribee with her partner Aldo. Her background is in Banking & Financial Management, but art is the thing that pulls her out of the ordinary day. She is the steady hand behind every Kiribee candle.",
-    benefitsHeading: "Why beeswax",
-    processHeading: "How a Kiribee candle is made",
-    candlesHeading: "Featured candles",
-    wrapsHeading: "Beeswax food wraps",
-    wrapsBody:
-      "Kiribee also makes beeswax food wraps, a reusable, washable, plastic-free alternative to cling film. Cotton soaked in beeswax, tree resin, and jojoba oil. Naturally antibacterial. Reusable for up to a year.",
-    contactHeading: "Contact",
-    contactBody:
-      "Custom dedications, bulk orders, gifts, food wraps, write to us and Ana or Aldo will reply personally.",
-    location: "Based in Tirana, Albania, ships across the country.",
-    quoteCredit: `As featured in ${ATTRIBUTION.source} (${ATTRIBUTION.date}).`,
-  },
-  sq: {
-    title: "Kiribee · Qirinj me dyll bleta të bërë me dorë në Shqipëri",
-    sub: "Bërë nga Ana & Aldo në Tiranë me 100% dyll bleta shqiptar",
-    storyHeading: "Historia jonë",
-    storyP1:
-      "Ana dhe Aldo janë një çift nga Tirana, Shqipëri. Gjatë pandemisë së COVID-it, mësuan vetë artin e punës me dyll bleta dhe vunë re një hapësirë në tregun shqiptar për qirinj të vërtetë me dyll bleta. Vendosën të jenë të parët që e mbushin atë.",
-    storyP2:
-      "Sot çdo qiri Kiribee derdhet me dorë, nga 100% dyll bleta i pastër shqiptar. Pa kimikate, pa shkurtesa, pa kompromise. Misioni i tyre është i vogël por kokëfortë: t'u japin njerëzve një arsye për të ngadalësuar.",
-    aboutHeading: "Njihu me Anën",
-    aboutBody:
-      "Ana është bashkëthemeluese e Kiribee së bashku me partnerin e saj Aldo. Sfondi i saj është në Menaxhim Bankar dhe Financiar, por arti është gjëja që e nxjerr nga dita e zakonshme. Ajo është dora e qetë pas çdo qiriu Kiribee.",
-    benefitsHeading: "Pse dyll bleta",
-    processHeading: "Si bëhet një qiri Kiribee",
-    candlesHeading: "Qirinj të zgjedhur",
-    wrapsHeading: "Mbështjellës ushqimi me dyll bleta",
-    wrapsBody:
-      "Kiribee bën gjithashtu mbështjellës ushqimi me dyll bleta, alternativa e ripërdorshme, e lashme dhe pa plastikë ndaj plastikës ngjitëse. Pambuk i lyer me dyll bleta, rrëshirë peme dhe vaj jojoba. Antibakterial natyralisht. I ripërdorshëm deri në një vit.",
-    contactHeading: "Kontakt",
-    contactBody:
-      "Kushtime të personalizuara, porosi me shumicë, dhurata, mbështjellës ushqimi, na shkruaj dhe Ana ose Aldo do të të përgjigjen personalisht.",
-    location: "Me bazë në Tiranë, Shqipëri, dërgon në të gjithë vendin.",
-    quoteCredit: `Pjesë e veçantë në ${ATTRIBUTION.source} (${ATTRIBUTION.date}).`,
-  },
+// Plain markdown copies of the homepage for AI agents (/index.md, /sq/index.md,
+// /llms.txt). Built from the same copy the page renders, so they never drift.
+
+const LABELS = {
+  en: { contact: "Contact", wraps: "Beeswax food wraps", facts: "A few things about Ana", also: "This page is also available in", agents: "Plain-text copies for AI agents" },
+  sq: { contact: "Kontakt", wraps: "Mbështjellëse ushqimi me dyll blete", facts: "Disa gjëra për Anën", also: "Kjo faqe është edhe në", agents: "Kopje me tekst të thjeshtë për agjentët AI" },
 } as const;
 
 export function buildPageMarkdown(locale: Locale = "en"): string {
-  const s = STRINGS[locale];
+  const c = getCopy(locale);
+  const l = LABELS[locale];
+  const bestseller = locale === "sq" ? "më i shituri" : "bestseller";
 
-  const benefitsList = BENEFITS.map(
-    (b) => `- **${b.title[locale]}** · ${b.body[locale]}`
-  ).join("\n");
-
-  const processList = PROCESS_STEPS.map(
-    (p) => `${p.step}. **${p.title[locale]}** · ${p.body[locale]}`
-  ).join("\n");
-
-  const candlesList = FEATURED_CANDLES.map(
-    (c) =>
-      `### ${c.name}${c.signature ? " *(bestseller)*" : ""}\n${c.blurb[locale]}\n`
-  ).join("\n");
-
-  const factsList = ABOUT_ANA.facts[locale].map((f) => `- ${f}`).join("\n");
-
-  const wrapsList = WRAPS.benefits
-    .map((b) => `- **${b.title[locale]}** · ${b.body[locale]}`)
+  const candles = c.collection.candles
+    .map((cd) => `### ${cd.name}${cd.signature ? ` *(${bestseller})*` : ""}\n${cd.blurb}\n`)
     .join("\n");
+  const benefits = c.benefits.items.map((b) => `- **${b.title}**: ${b.body}`).join("\n");
+  const steps = c.process.steps.map((p, i) => `${i + 1}. **${p.title}**: ${p.body}`).join("\n");
+  const facts = c.story.facts.map((f) => `- **${f.label}**: ${f.text}`).join("\n");
+  const wraps = c.wraps.items.map((b) => `- **${b.title}**: ${b.body}`).join("\n");
 
-  return `# ${s.title}
+  return `# Kiribee · ${c.hero.eyebrow}
 
-> ${s.sub}
+> ${c.hero.lede}
 
-${s.location}
+${c.contact.location}
 
 - Website: ${SITE.url}
 - Email: ${SITE.email}
 - Instagram: ${SITE.instagramHandle} · ${SITE.instagram}
 - Facebook: ${SITE.facebook}
+- WhatsApp: ${SITE.whatsappDisplay}
 - Founders: ${SITE.founders.join(" & ")}
 - Founded: ${SITE.founded}
 - Location: ${SITE.city}, ${SITE.countryName}
 
 ---
 
-## ${s.storyHeading}
+## ${c.collection.eyebrow}: ${c.collection.title}
 
-${s.storyP1}
+${c.collection.subtitle}
 
-${s.storyP2}
+${candles}
+---
 
-> "${PULL_QUOTE[locale]}"
-> Ana & Aldo · ${s.quoteCredit}
+## ${c.benefits.eyebrow}: ${c.benefits.title}
+
+${c.benefits.factValue.toLocaleString("en-US")} ${c.benefits.factLabel} ${c.benefits.factAfter}
+
+${benefits}
 
 ---
 
-## ${s.aboutHeading}
+## ${c.process.eyebrow}: ${c.process.title}
 
-${s.aboutBody}
+${c.process.subtitle}
 
-${factsList}
-
----
-
-## ${s.benefitsHeading}
-
-${benefitsList}
+${steps}
 
 ---
 
-## ${s.processHeading}
+## ${c.burn.title}
 
-${processList}
-
----
-
-## ${s.candlesHeading}
-
-${candlesList}
+${c.burn.body}
 
 ---
 
-## ${s.wrapsHeading}
+## ${c.story.eyebrow}: ${c.story.title}
 
-${s.wrapsBody}
+${c.story.p1}
 
-${wrapsList}
+${c.story.p2}
+
+> "${c.story.quote}"
+> ${c.story.credit} ${c.story.creditSource}
+
+${c.story.p3}
+
+${c.story.signature}
+
+### ${l.facts}
+
+${facts}
 
 ---
 
-## ${s.contactHeading}
+## ${l.wraps}
 
-${s.contactBody}
+${c.wraps.lede}
+
+${wraps}
+
+---
+
+## ${l.contact}
+
+${c.contact.subtitle}
 
 - Email: ${SITE.email}
 - WhatsApp: ${SITE.whatsappDisplay}
-- Instagram DM: ${SITE.instagram}
+- Instagram: ${SITE.instagram}
 - Facebook: ${SITE.facebook}
 
-${s.location}
+${c.contact.location}
 
 ---
 
-This page is also available in:
+${l.also}:
+- Shqip · ${SITE.url}/sq
 - English · ${SITE.url}/en
-- Albanian · ${SITE.url}/sq
 
-Plain-text/markdown copies for AI agents:
-- ${SITE.url}/index.md
-- ${SITE.url}/home.md
+${l.agents}:
+- ${SITE.url}/sq/index.md
+- ${SITE.url}/en/index.md
 - ${SITE.url}/llms.txt
 `;
 }
 
 export function buildLlmsTxt(): string {
+  const en = getCopy("en");
+  const sq = getCopy("sq");
   return `# Kiribee
 
-> Hand-poured 100% Albanian beeswax candles, made in Tirana by Ana & Aldo. Also makes reusable beeswax food wraps.
+> Handmade 100% Albanian beeswax candles from Tirana, Albania, made by Ana & Aldo. In Albanian: ${sq.hero.eyebrow.toLowerCase()}. Also makes reusable beeswax food wraps.
 
-Kiribee is a small artisan brand founded in ${SITE.founded}. Every candle is poured by hand from pure Albanian beeswax, eco-friendly, hypoallergenic, free of chemical compounds, and slow-burning. Bestseller: BeeQuite, a sculpted candle of a hand cradling a child. Kiribee also produces beeswax food wraps as a plastic-free, reusable kitchen alternative.
+Kiribee is a small artisan brand founded in ${SITE.founded}. Every candle is made by hand from pure Albanian beeswax: eco-friendly, hypoallergenic, free of chemical compounds and slow-burning. Pieces can be personalised with names and dedications, and are popular as wedding, anniversary and family gifts. Bestseller: BeeQuite, a sculpted candle of a hand cradling a child. Kiribee ships across Albania.
 
 ## Canonical content
 
-- [Full English page (markdown)](${SITE.url}/index.md)
-- [Full Albanian page (markdown)](${SITE.url}/sq/index.md)
-- [HTML · English](${SITE.url}/en)
-- [HTML · Albanian](${SITE.url}/sq)
+- [Albanian page, markdown](${SITE.url}/sq/index.md)
+- [English page, markdown](${SITE.url}/en/index.md)
+- [HTML, Albanian](${SITE.url}/sq)
+- [HTML, English](${SITE.url}/en)
 - [Sitemap](${SITE.url}/sitemap.xml)
 
 ## Contact
@@ -189,12 +145,12 @@ Kiribee is a small artisan brand founded in ${SITE.founded}. Every candle is pou
 - WhatsApp: ${SITE.whatsappDisplay}
 - Location: ${SITE.city}, ${SITE.countryName}
 
-## Featured candles
+## Candles
 
-${FEATURED_CANDLES.map((c) => `- ${c.name}${c.signature ? " (bestseller)" : ""}: ${c.blurb.en}`).join("\n")}
+${en.collection.candles.map((c) => `- ${c.name}${c.signature ? " (bestseller)" : ""}: ${c.blurb}`).join("\n")}
 
 ## Other products
 
-- Beeswax food wraps, reusable, washable, plastic-free alternative to cling film. Cotton + beeswax + tree resin + jojoba oil. Up to a year of use, naturally antibacterial, fully biodegradable.
+- ${en.wraps.title} ${en.wraps.lede}
 `;
 }

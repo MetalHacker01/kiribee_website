@@ -13,7 +13,7 @@ export function buildMetadata(locale: Locale, m: Strings): Metadata {
   const url = `${SITE.url}/${locale}`;
   const alternates: Record<string, string> = {};
   for (const l of locales) alternates[l] = `${SITE.url}/${l}`;
-  alternates["x-default"] = `${SITE.url}/en`;
+  alternates["x-default"] = `${SITE.url}/sq`;
 
   return {
     metadataBase: new URL(SITE.url),
