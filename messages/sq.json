@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Kiribee · Qirinj me dyll bleta të bërë me dorë në Shqipëri",
-    "description": "Kiribee krijon qirinj 100% me dyll bleta shqiptar në Tiranë. Miqësorë me natyrën, hipoalergjenikë, të derdhur me dorë nga Ana dhe Aldo me një dorë dashuri.",
-    "ogAlt": "Kiribee, qirinj me dyll bleta të bërë me dorë në Shqipëri"
+    "title": "Kiribee · Qirinj me dyll blete, punuar me dorë në Tiranë",
+    "description": "Qirinj artizanalë me 100% dyll blete shqiptar, të derdhur me dorë nga Ana dhe Aldo në Tiranë. Dhurata të personalizuara për dasma, ditëlindje dhe shtëpinë. Dërgojmë në gjithë Shqipërinë.",
+    "ogAlt": "Kiribee, qirinj me dyll blete të punuar me dorë në Tiranë"
   },
   "nav": {
     "story": "Historia",
@@ -95,6 +95,7 @@
   "errors": {
     "nameRequired": "Të lutem na thuaj emrin tënd.",
     "emailInvalid": "Të lutem shkruaj një email të vlefshëm.",
-    "messageShort": "Të lutem shkruaj disa fjalë për atë që dëshiron."
+    "messageShort": "Të lutem shkruaj disa fjalë për atë që dëshiron.",
+    "captchaRequired": "Ju lutem konfirmoni \"Nuk jam robot\"."
   }
 }

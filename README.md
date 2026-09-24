@@ -25,8 +25,9 @@ The first request loads the English locale by default. Visit `/sq` for Albanian.
 - `lib/markdown.ts` — generates the `.md` route bodies from the same source as the UI
 - `lib/seo.ts` — metadata + JSON-LD helpers
 - `messages/{en,sq}.json` — i18n strings consumed by next-intl
-- `components/sections/*` — Hero, Story, Benefits, Process, FeaturedCandles, Gallery, Contact, Footer
-- `components/motion/*` — Reveal, SmoothScroll (Lenis), Flame
+- `components/home/*`: the homepage (HomePage.tsx), its copy in both languages (copy.ts), styles (home.module.css) and small client islands (hero candle, bee cursor, contact form)
+- `components/forms/Recaptcha.tsx`: lazy reCAPTCHA v2 checkbox
+- `components/ui/smooth-cursor.tsx`: spring cursor used for the bee
 - `scripts/fetch-ig-images.mjs` — pulls top-liked photos from `../posts.json`
 
 ## Deploy to Vercel

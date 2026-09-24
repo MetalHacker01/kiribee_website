@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Kiribee · Hand-poured beeswax candles from Albania",
-    "description": "Kiribee crafts 100% Albanian beeswax candles in Tirana. Eco-friendly, hypoallergenic, hand-poured by Ana and Aldo with a dash of love.",
-    "ogAlt": "Kiribee, beeswax candles handmade in Albania"
+    "title": "Kiribee · Handmade beeswax candles from Tirana, Albania",
+    "description": "Hand-poured candles in 100% Albanian beeswax, made by Ana and Aldo in Tirana. Sculpted, personalised gifts for weddings, birthdays and the home. Shipping across Albania.",
+    "ogAlt": "Kiribee, beeswax candles handmade in Tirana, Albania"
   },
   "nav": {
     "story": "Story",
@@ -95,6 +95,7 @@
   "errors": {
     "nameRequired": "Please tell us your name.",
     "emailInvalid": "Please enter a valid email address.",
-    "messageShort": "Please write a few words about what you'd like."
+    "messageShort": "Please write a few words about what you'd like.",
+    "captchaRequired": "Please tick the \"I'm not a robot\" box."
   }
 }

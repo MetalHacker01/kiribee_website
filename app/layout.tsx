@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Fraunces } from "next/font/google";
+import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -10,11 +11,17 @@ const sans = Inter({
   display: "swap",
 });
 
-const display = Fraunces({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-display",
+// Bodoni Moda (OFL) echoes the high-contrast serif of the Kiribee wordmark.
+// Static instances (weight 450, optical size 24) subset to Latin plus the
+// Albanian letters: 28 kB instead of 98 kB for the variable files.
+const display = localFont({
+  src: [
+    { path: "./fonts/BodoniModa-450.woff2", weight: "400 500", style: "normal" },
+    { path: "./fonts/BodoniModa-450-Italic.woff2", weight: "400 500", style: "italic" },
+  ],
+  variable: "--font-bodoni",
   display: "swap",
-  axes: ["opsz", "SOFT", "WONK"],
+  fallback: ["Georgia", "serif"],
 });
 
 export const metadata: Metadata = {

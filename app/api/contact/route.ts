@@ -10,7 +10,25 @@ const Body = z.object({
   locale: z.enum(["en", "sq"]).optional(),
   // honeypot
   website: z.string().optional(),
+  recaptchaToken: z.string().max(4000).optional(),
 });
+
+async function verifyRecaptcha(secret: string, token: string, ip: string) {
+  try {
+    const body = new URLSearchParams({ secret, response: token });
+    if (ip !== "unknown") body.set("remoteip", ip);
+    const res = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body,
+    });
+    const data = (await res.json()) as { success?: boolean };
+    return data.success === true;
+  } catch (err) {
+    console.error("[contact] recaptcha verify error:", err);
+    return false;
+  }
+}
 
 // Tiny in-memory rate limit (per-instance, best-effort).
 const HITS = new Map<string, { count: number; reset: number }>();
@@ -49,6 +67,17 @@ export async function POST(req: Request) {
   // Silent honeypot trap
   if (parsed.website && parsed.website.length > 0) {
     return NextResponse.json({ ok: true });
+  }
+
+  // reCAPTCHA v2. Enforced whenever the secret is configured.
+  const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
+  if (recaptchaSecret) {
+    if (!parsed.recaptchaToken) {
+      return NextResponse.json({ error: "captcha_required" }, { status: 400 });
+    }
+    if (!(await verifyRecaptcha(recaptchaSecret, parsed.recaptchaToken, ip))) {
+      return NextResponse.json({ error: "captcha_failed" }, { status: 400 });
+    }
   }
 
   const apiKey = process.env.RESEND_API_KEY;

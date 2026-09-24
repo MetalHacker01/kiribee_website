@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE, SOCIAL_PROFILES, FEATURED_CANDLES } from "./content";
+import { SITE, SOCIAL_PROFILES } from "./content";
 import type { Locale } from "@/i18n";
 import { locales } from "@/i18n";
 
@@ -17,20 +17,11 @@ export function buildMetadata(locale: Locale, m: Strings): Metadata {
 
   return {
     metadataBase: new URL(SITE.url),
-    title: m.title,
+    // Absolute: the title already starts with the brand, so skip the
+    // root "%s · Kiribee" template (it produced "Kiribee · ... · Kiribee").
+    title: { absolute: m.title },
     description: m.description,
     applicationName: SITE.name,
-    keywords: [
-      "Kiribee",
-      "beeswax candles",
-      "Albanian beeswax",
-      "qirinj me dyll bleta",
-      "qirinj artizanal",
-      "handmade candles Albania",
-      "Tirana candles",
-      "eco-friendly candles",
-      "BeeQuite",
-    ],
     alternates: { canonical: url, languages: alternates },
     openGraph: {
       type: "website",
@@ -90,7 +81,7 @@ export function localBusinessJsonLd(locale: Locale) {
     email: SITE.email,
     description:
       locale === "sq"
-        ? "Qirinj me dyll bleta të bërë me dorë në Tiranë."
+        ? "Qirinj me dyll blete, të punuar me dorë në Tiranë."
         : "Hand-poured beeswax candles from Tirana, Albania.",
     address: {
       "@type": "PostalAddress",
@@ -111,16 +102,4 @@ export function websiteJsonLd() {
     url: SITE.url,
     inLanguage: ["en", "sq"],
   };
-}
-
-export function productsJsonLd(locale: Locale) {
-  return FEATURED_CANDLES.map((c) => ({
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: c.name,
-    description: c.blurb[locale],
-    image: `${SITE.url}${c.imageSrc}`,
-    brand: { "@type": "Brand", name: SITE.name },
-    category: "Candle",
-  }));
 }
